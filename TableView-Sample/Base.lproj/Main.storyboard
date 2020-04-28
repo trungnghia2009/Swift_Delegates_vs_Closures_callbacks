@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rLQ-XN-iuR">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="53k-v4-2k2">
+            <objects>
+                <tableViewController id="vPv-1x-XHn" customClass="TableViewController" customModule="TableView_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cpT-nU-Irk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" rowHeight="130" id="Dfz-aw-FVf" customClass="CustomTableViewCell" customModule="TableView_Sample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dfz-aw-FVf" id="sB9-iX-bgg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bG2-mF-Osk">
+                                            <rect key="frame" x="36" y="19" width="342" height="92"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIT-MG-k1u">
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="30.666666666666668"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="qY6-cz-c3X"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Change Navigation Title"/>
+                                                    <connections>
+                                                        <action selector="changeNavigationTitleButtonPressed:" destination="Dfz-aw-FVf" eventType="touchUpInside" id="hpk-DO-mCU"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvK-qH-qkH">
+                                                    <rect key="frame" x="0.0" y="30.666666666666664" width="342" height="30.666666666666664"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="8uI-fJ-xKz"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Change background color"/>
+                                                    <connections>
+                                                        <action selector="changeBackgroundColorButtonPressed:" destination="Dfz-aw-FVf" eventType="touchUpInside" id="PlZ-Sh-sTh"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rV-wV-9C4">
+                                                    <rect key="frame" x="0.0" y="61.333333333333321" width="342" height="30.666666666666664"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="PIb-9y-h1M"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Change right bar button"/>
+                                                    <connections>
+                                                        <action selector="changeRightBarButtonTapped:" destination="Dfz-aw-FVf" eventType="touchUpInside" id="NqG-b5-CPb"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bG2-mF-Osk" firstAttribute="leading" secondItem="sB9-iX-bgg" secondAttribute="leadingMargin" constant="16" id="CNU-B7-V0l"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bG2-mF-Osk" secondAttribute="trailing" constant="16" id="OQp-jM-2jl"/>
+                                        <constraint firstItem="bG2-mF-Osk" firstAttribute="top" secondItem="sB9-iX-bgg" secondAttribute="topMargin" constant="8" id="TlO-8V-Wac"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bG2-mF-Osk" secondAttribute="bottom" constant="8" id="f5n-gf-kQj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vPv-1x-XHn" id="ocV-8h-IrR"/>
+                            <outlet property="delegate" destination="vPv-1x-XHn" id="rB1-Xx-BUO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1DN-c0-awk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5O-WW-GKd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.72463768115949" y="-44.196428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dEC-wM-Pvf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rLQ-XN-iuR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k0r-ck-NHy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vPv-1x-XHn" kind="relationship" relationship="rootViewController" id="Hvl-Cg-Wlr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHC-4j-MYy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-59.420289855072468" y="-44.196428571428569"/>
+        </scene>
+    </scenes>
+</document>
